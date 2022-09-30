@@ -8,7 +8,7 @@ require_once(__DIR__ . "./../mocks/validResults.php");
 use PHPUnit\Framework\TestCase;
 use Src\Utils\ConstructClassBody;
 
-define('DEFAULT_CONSTRUCTOR_PARAM', array(
+define('CONSTRUCTOR_PARAM_BASE', array(
     'codSitAluno',
     'codTpSituacao',
     'ativo',
@@ -26,7 +26,7 @@ final class ConstructClassBodyTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->instance = new ConstructClassBody(DEFAULT_CONSTRUCTOR_PARAM);
+        $this->instance = new ConstructClassBody(CONSTRUCTOR_PARAM_BASE);
     }
 
     public function testGenerateAttributes()
