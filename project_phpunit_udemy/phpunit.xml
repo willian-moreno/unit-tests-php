@@ -12,6 +12,9 @@
       <directory suffix=".php">src</directory>
       <exclude>
         <directory suffix="Test.php">src</directory>
+        <directory suffix="Repository.php">src</directory>
+        <directory suffix="Spy.php">src</directory>
+        <directory suffix="Stub.php">src</directory>
       </exclude>
     </whitelist>
   </filter>
