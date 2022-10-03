@@ -1,6 +1,6 @@
 <phpunit colors="true" bootstrap="vendor/autoload.php" stopOnFailure="false">
   <testsuites>
-    <testsuite name="Construct Class Body">
+    <testsuite name="App Suite Tests">
       <directory suffix="Test.php">src</directory>
     </testsuite>
   </testsuites>
