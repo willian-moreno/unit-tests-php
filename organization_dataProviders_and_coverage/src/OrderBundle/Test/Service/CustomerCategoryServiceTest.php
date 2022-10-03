@@ -14,7 +14,7 @@ class CustomerCategoryServiceTest extends TestCase
 {
     private $customerCategoryService;
 
-    public function setup()
+    public function setUp(): void
     {
         $this->customerCategoryService = new CustomerCategoryService();
         $this->customerCategoryService->addCategory(new HeavyUserCategory());

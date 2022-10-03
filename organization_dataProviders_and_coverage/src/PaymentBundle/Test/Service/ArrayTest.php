@@ -8,11 +8,6 @@ class ArrayTest extends TestCase
 {
     private $array;
 
-    public static function setUpBeforeClass()
-    {
-
-    }
-
     /**
      * @test
      */

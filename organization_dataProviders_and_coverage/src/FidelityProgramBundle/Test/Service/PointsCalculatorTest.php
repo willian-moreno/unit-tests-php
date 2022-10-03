@@ -18,7 +18,7 @@ class PointsCalculatorTest extends TestCase
         $this->assertEquals($expectedPoints, $points);
     }
 
-    public function valueDataProvider()
+    public static function valueDataProvider()
     {
         return [
             [30, 0],

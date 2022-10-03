@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"test": ".\\vendor\\bin\\phpunit --testdox",
+		"test:cov": ".\\vendor\\bin\\phpunit --whitelist --coverage-html report"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "src/",
+			"MyFramework\\": "app/"
+		}
+	},
+	"require-dev": {
+		"phpunit/phpunit": "9",
+		"phpunit/php-code-coverage": "8"
+	}
+}

@@ -20,7 +20,7 @@ class PaymentServiceTest extends TestCase
     private $item;
     private $creditCard;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->gateway = $this->createMock(Gateway::class);
         $this->paymentTransactionRepository = $this->createMock(PaymentTransactionRepository::class);
@@ -40,7 +40,9 @@ class PaymentServiceTest extends TestCase
             ->expects($this->atLeast(3))
             ->method('pay')
             ->will($this->onConsecutiveCalls(
-                false, false, true
+                false,
+                false,
+                true
             ));
 
         $this->paymentTransactionRepository
@@ -59,7 +61,9 @@ class PaymentServiceTest extends TestCase
             ->expects($this->atLeast(3))
             ->method('pay')
             ->will($this->onConsecutiveCalls(
-                false, false, false
+                false,
+                false,
+                false
             ));
 
         $this->paymentTransactionRepository
@@ -67,11 +71,10 @@ class PaymentServiceTest extends TestCase
             ->method('save');
 
         $this->expectException(PaymentErrorException::class);
-
         $this->paymentService->pay($this->customer, $this->item, $this->creditCard);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->gateway);
     }

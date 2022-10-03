@@ -24,7 +24,7 @@ final class ConstructClassBodyTest extends TestCase
 {
     private $instance;
 
-    protected function setUp(): void
+    public function setUp(): void
     {
         $this->instance = new ConstructClassBody(CONSTRUCTOR_PARAM_BASE);
     }
