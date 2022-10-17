@@ -1,7 +1,7 @@
 {
 	"scripts": {
-		"test": ".\\vendor\\bin\\phpunit --testdox",
-		"test:cov": ".\\vendor\\bin\\phpunit --whitelist --coverage-html report"
+		"test": "./vendor/bin/phpunit --testdox",
+		"test:cov": "./vendor/bin/phpunit --whitelist --coverage-html report"
 	},
 	"autoload": {
 		"psr-0": {
